@@ -1,0 +1,21 @@
+SSL Certificate Configuration – Migration Runbook
+
+Overview
+
+A new SSL certificate has been generated for the updated DNS:
+	•	Domain: onesourceforengineering.honaero.com
+	•	The certificate was created using the Aero Console (AWS SSO link provided in Landing Zone section).
+
+⸻
+
+Certificate Details
+	•	Required Formats:
+	•	chain.pem (Intermediate + Root Certificate Chain)
+	•	.crt (Primary Certificate)
+	•	.key (Private Key)
+
+⸻
+
+Certificate Location
+
+All certificate files are stored at:
