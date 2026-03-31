@@ -1,0 +1,44 @@
+Application Configuration Changes – Migration Runbook
+
+Overview
+
+As part of the migration to the new environment, application configuration updates were performed to align with the new DNS and SSO setup.
+
+⸻
+
+Configuration File Details
+	•	Apache Config Path:/etc/httpd
+Application Config File: /webdata/1s4e_apps/docs/config/config.ini
+
+Changes Performed
+
+1. DNS Update
+	•	Updated application configuration with new domain:onesourceforengineering.honaero.com
+2. SSO Configuration Update
+	•	Updated SSO-related parameters in the config file:
+	•	SSO Domain / Endpoint
+	•	Client ID
+	•	Client Secret / Auth Key
+	•	Ensured alignment with newly generated SSO certificate and configuration.
+
+⸻
+
+Service Restart
+
+After applying configuration changes, Apache service was restarted:systemctl restart httpd
+
+Validation Steps
+	•	Verified application accessibility via new DNS:https://onesourceforengineering.honaero.com
+
+•	Confirmed:
+	•	Application loads successfully
+	•	SSO redirection works correctly
+	•	No configuration or certificate errors observed
+
+⸻
+
+Important Notes
+	•	Ensure backup of config.ini before making changes.
+	•	Validate syntax before restart to avoid service downtime:apachectl configtest
+
+
