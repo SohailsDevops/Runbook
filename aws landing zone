@@ -1,0 +1,77 @@
+AWS Landing Zone Details – Migration Runbook
+
+Overview
+
+A new AWS Landing Zone has been successfully created for the HON Aero application as part of the migration activity. This setup includes separate environments for Production and Non-Production, along with dedicated VPCs and subnet configurations for database and web application layers.
+
+⸻
+
+Aero Console Access
+	•	URL: https://d-906638ffca.awsapps.com/start
+
+⸻
+
+1. Production Environment
+
+Account Details
+	•	Account Name: Aero AWS Commercial Prod
+	•	Account ID: 219078481891
+
+Network Configuration
+
+Database Layer
+	•	DB VPC: 10.89.54.64/26
+	•	DB Subnets:
+	•	10.89.54.80/28
+	•	10.89.54.64/28
+
+Web Application Layer
+	•	WebApp VPC: 10.89.54.128/26
+	•	WebApp Subnets:
+	•	10.89.54.128/28
+	•	10.89.54.144/28
+
+⸻
+
+2. Non-Production Environment
+
+Account Details
+	•	Account Name: Aero AWS Commercial Non-Prod
+	•	Account ID: 331986576912
+
+Network Configuration
+
+Database Layer
+	•	DB VPC: 10.89.64.0/26
+	•	DB Subnets:
+	•	10.89.64.0/28
+	•	10.89.64.16/28
+
+Web Application Layer
+	•	WebApp VPC: 10.89.66.0/26
+	•	WebApp Subnets:
+	•	10.89.66.0/28
+	•	10.89.66.16/28
+
+⸻
+
+3. EC2 Instance Details (Sample – WebApp Layer)
+	•	Instance ID: i-04b14fba4cc3b7e56
+	•	Instance Name: AAWSC0000502
+	•	Instance Type: m5.large
+	•	Region: US East (N. Virginia)
+	•	Instance State: Running
+
+Network Details
+	•	Private IP Address: 10.89.66.13
+	•	Private DNS: ip-10-89-66-13.ec2.internal
+	•	VPC ID: vpc-08741bd3ef42dae9a (WebAppVPC – Non-Prod)
+	•	Public IP: Not assigned
+
+⸻
+
+4. Key Notes
+	•	Separate VPCs are maintained for DB and WebApp layers to ensure isolation and security.
+	•	Subnets are segmented for better control and scalability.
+	•	No public IP is assigned to instances, indicating private/internal access architecture.
+	•	Landing Zone follows a multi-account strategy for environment separation (Prod vs Non-Prod).
