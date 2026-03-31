@@ -39,3 +39,27 @@ Configured Firewall Rules
 	•	Destination: DB VPC
 	•	Port: 1521 (Oracle DB)
 	•	Purpose: Application to database communication
+
+Application Details – Migration Runbook
+
+Overview
+
+The following details correspond to the migrated application in the new AWS environment.
+
+⸻
+
+Application Information
+	•	Application Name (ASN Name):
+ONESOURCE FOR ENGINEERING 8.0 QA AERO
+	•	Application Service Number (ASN):
+ASN0022902
+	•	Business Application Number (BAN):
+BAN0005525
+	•	Change Request Number:
+CHG0493642
+	•	Service Owner:
+JothyVijay.Venkataraman@Honeywell.com (E243374)
+	•	Strategic Business Group (SBG):
+AERO
+
+
