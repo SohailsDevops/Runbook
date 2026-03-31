@@ -1,0 +1,41 @@
+Firewall Configuration – Migration Runbook
+
+Overview
+
+As part of the migration, firewall rules were requested and configured to enable secure communication between VDI, Web Application, and Database layers.
+	•	Firewall Request Reference: FWFR for AERO #77013
+	•	Request Date: March 27, 2026
+
+⸻
+
+Configured Firewall Rules
+
+1. VDI to Web Application VPC
+	•	Source: VDI
+	•	Destination: WebApp VPC
+	•	Port: 443 (HTTPS)
+	•	Purpose: Secure access to web application
+
+⸻
+
+2. VDI to Database VPC
+	•	Source: VDI
+	•	Destination: DB VPC
+	•	Port: 1521 (Oracle DB)
+	•	Purpose: Direct database connectivity (if required for admin/tools)
+
+⸻
+
+3. VDI to Web Application (SSH Access)
+	•	Source: VDI
+	•	Destination: WebApp Servers
+	•	Port: 22 (SSH)
+	•	Purpose: Administrative access to application servers
+
+⸻
+
+4. Web Application to Database
+	•	Source: WebApp VPC
+	•	Destination: DB VPC
+	•	Port: 1521 (Oracle DB)
+	•	Purpose: Application to database communication
