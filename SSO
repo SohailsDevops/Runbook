@@ -1,0 +1,36 @@
+SSO Configuration – Migration Runbook
+
+Overview
+
+As part of the migration, a new SSO configuration has been established for the updated application domain.
+	•	Application Domain: onesourceforengineering.honaero.com
+	•	A new SSO certificate has been requested and configured using the SSO domain.
+	•	Client authentication credentials have been generated for secure integration.
+
+⸻
+
+SSO Certificate Details
+	•	A new SSO certificate was created to establish trust between the application and the Identity Provider (IdP).
+	•	This certificate is used for:
+	•	Signing authentication requests
+	•	Validating responses from the IdP
+
+⸻
+
+SSO Configuration Parameters
+
+The following details were generated and configured:
+	•	SSO Domain: (Configured as per organization IdP)
+	•	Client ID: <Generated Client ID>
+	•	Client Secret / Auth Key: <Generated Auth Key>
+
+⸻
+
+Application Configuration
+
+Ensure the application is updated with the new SSO details:
+	•	Update Client ID and Client Secret/Auth Key in application configuration files or secrets manager.
+	•	Configure correct SSO endpoints, such as:
+	•	Authorization URL
+	•	Token URL
+	•	Logout URL (if applicable)
